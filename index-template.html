@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Webpack App</title>
+
+  <style>
+    .scrollContainer {
+      border: 5px solid blue;
+      height: 500px;
+      overflow: auto;
+      text-align: center;
+    }
+
+    .toolbar {
+      background-color: red;
+      height: 100px;
+    }
+
+    .table {
+      border: 10px solid green;
+    }
+
+    .header {
+      height: 100px;
+      background-color: yellow;
+    }
+
+    .footer {
+      height: 100px;
+      background-color: yellow;
+    }
+
+    .row {
+      height: 100px;
+      background-color: pink;
+      border: 1px solid black;
+    }
+
+    .content1 {
+      height: 500px;
+    }
+
+    .content2 {
+      height: 800px;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="height: 50px; background-color: grey;"></div>
+  <div class="scrollContainer maxAreaContainer">
+    <div class="content1">content 1</div>
+    <div class="toolbar sticky">toolbar</div>
+    <div class="table maxAreaContainer">
+      <div class="header sticky">header</div>
+      <div class="row">row1</div>
+      <div class="row">row2</div>
+      <div class="row">row3</div>
+      <div class="footer sticky">footer</div>
+    </div>
+    <div class="content2">content 2</div>
+  </div>
+</body>
+
+</html>
