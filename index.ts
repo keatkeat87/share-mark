@@ -74,31 +74,31 @@ scrollContainer.addEventListener('scroll', () => {
 
 
 
-    // const footerScrollContainer = document.querySelector('.scrollContainer');
-    // const footerMaxAreaContainer = getMaxAreaContainer(footer);
+    const footerScrollContainer = document.querySelector('.scrollContainer');
+    const footerMaxAreaContainer = getMaxAreaContainer(footer);
 
-    // const footerScrollContainerRect = footerScrollContainer.getBoundingClientRect();
-    // const footerRect = footer.getBoundingClientRect();
-    // const footerMaxAreaContainerRect = footerMaxAreaContainer.getBoundingClientRect();
+    const footerScrollContainerRect = footerScrollContainer.getBoundingClientRect();
+    const footerRect = footer.getBoundingClientRect();
+    const footerMaxAreaContainerRect = footerMaxAreaContainer.getBoundingClientRect();
 
-    // const footerScrollContainerBorderBottom = parseFloat(window.getComputedStyle(footerScrollContainer).borderBottomWidth);
-    // let footerStickPoint = footerScrollContainerRect.bottom + footerScrollContainerBorderBottom;
+    const footerScrollContainerBorderBottom = parseFloat(window.getComputedStyle(footerScrollContainer).borderBottomWidth);
+    let footerStickPoint = footerScrollContainerRect.bottom + footerScrollContainerBorderBottom;
 
-    // const footerMaxAreaContainerBorderTop = footerMaxAreaContainer.clientTop;
-    // let minFooterStickPoint = footerMaxAreaContainerRect.top + footerMaxAreaContainerBorderTop + footer.offsetHeight; // todo maggin
-    // minFooterStickPoint += header.offsetHeight;
+    const footerMaxAreaContainerBorderTop = footerMaxAreaContainer.clientTop;
+    let minFooterStickPoint = footerMaxAreaContainerRect.top + footerMaxAreaContainerBorderTop + footer.offsetHeight; // todo maggin
+    minFooterStickPoint += header.offsetHeight;
 
-    // footerStickPoint = Math.max(footerStickPoint, minFooterStickPoint);
+    footerStickPoint = Math.max(footerStickPoint, minFooterStickPoint);
 
-    // const originalFooterRectBottom = footerRect.bottom + Math.abs(cacheFooterTranslateY);
+    const originalFooterRectBottom = footerRect.bottom + Math.abs(cacheFooterTranslateY);
 
-    // if (originalFooterRectBottom >= footerStickPoint) {
-    //     cacheFooterTranslateY = -Math.abs(originalFooterRectBottom - footerStickPoint);
-    //     footer.style.transform = `translateY(${cacheFooterTranslateY}px)`;
-    // }
-    // else {
-    //     cacheFooterTranslateY = 0;
-    //     footer.style.removeProperty('transform');
-    // }
+    if (originalFooterRectBottom >= footerStickPoint) {
+        cacheFooterTranslateY = -Math.abs(originalFooterRectBottom - footerStickPoint);
+        footer.style.transform = `translateY(${cacheFooterTranslateY}px)`;
+    }
+    else {
+        cacheFooterTranslateY = 0;
+        footer.style.removeProperty('transform');
+    }
 
 });
